@@ -9,14 +9,17 @@ const Navbar = () => {
                 <NavLink to = "/" >
                     Accueil
                 </NavLink>
-                <NavLink to = "/session/:id">
-                    Session
-                </NavLink>
                 <NavLink to = "/reservation">
                     Reservation
                 </NavLink>
                 <NavLink to = "/contact">
                     Contact
+                </NavLink>
+                <NavLink to = "/employees">
+                    Employees
+                </NavLink>
+                <NavLink to = "/sessions">
+                    Sessions
                 </NavLink>
             </NavMenu>
         </Nav>

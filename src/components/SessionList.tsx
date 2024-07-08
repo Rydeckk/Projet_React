@@ -16,8 +16,8 @@ const sessions = [
   const SessionList = () => {
     return (
       <List>
-        {sessions.map((session, index) => (
-          <SessionCard key={index} title={session.title} description={session.description} />
+        {sessions.map(({description,title}, index) => (
+          <SessionCard key={title} title={title} description={description} />
         ))}
       </List>
     );

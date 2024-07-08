@@ -2,7 +2,7 @@ import React from 'react'
 import {Card} from '../styles/SessionCard.styled'
 
 type SessionCardProps = {
-    title: String;
+    title: string;
     description: String;
 }
 
