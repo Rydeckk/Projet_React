@@ -1,17 +1,31 @@
 import React from 'react'
 import {Card} from '../styles/SessionCard.styled'
+import { Session } from '../api/server';
 
-type SessionCardProps = {
-    title: string;
-    description: String;
-}
+/*type Session = {
+    id: number;
+    theme: string;
+    duration: number;
+    price: number;
+    minParticipants: number;
+    availableSlots: string[];
+};*/
 
-const SessionCard = ({title, description}: SessionCardProps) => {
+const SessionCard = ({session}: {session: Session}) => {
     return (
         <Card>
-            <h2>{title}</h2>
-            <p>{description}</p>
-        </Card>
+        <h2>{session.theme}</h2>
+        <p>Duration: {session.duration} minutes</p>
+        <p>Price: ${session.price}</p>
+        <p>Minimum Participants: {session.minParticipants}</p>
+        <div className="slot-list">
+            {session.availableSlots.map((slot, index) => (
+            <span key={index} className="slot-item">
+                {slot}
+            </span>
+            ))}
+        </div>
+    </Card>
     )
 }
 export default SessionCard;

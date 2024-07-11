@@ -18,7 +18,7 @@ let employees: Employee[] = [
     { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com', position: 'Employee' }
 ];
 
-type Session = {
+export interface Session {
     id: number;
     theme: string;
     duration: number;
@@ -27,7 +27,7 @@ type Session = {
     availableSlots: string[];
 };
   
-let sessions: Session[] = [
+export let sessions: Session[] = [
     {
         id: 1,
         theme: 'Haunted House',
