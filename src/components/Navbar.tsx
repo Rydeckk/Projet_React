@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { NavLight, NavNight, NavLinkLight, NavLinkNight, NavMenu, NavSwitch, NavCheckbox, NavSlider, NavLabelLight, NavLabelNight, NavToggleTheme } from '../styles/Navbar.styled';
 import ThemeContext from '../context/ThemeContext';
 
