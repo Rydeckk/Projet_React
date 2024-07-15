@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 import { NavLink as Link } from 'react-router-dom';
 
-export const Nav = styled.nav`
+export const NavLight = styled.nav`
+  background: #ddd;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1000px) / 2);
+  z-index: 10;
+`;
+
+export const NavNight = styled.nav`
   background: #333;
   height: 60px;
   display: flex;
@@ -10,7 +19,21 @@ export const Nav = styled.nav`
   z-index: 10;
 `;
 
-export const NavLink = styled(Link)`
+export const NavLinkLight = styled(Link)`
+  color: #000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
+  &.active {
+    color: #00a7d1;
+  }
+`;
+
+export const NavLinkNight = styled(Link)`
   color: #fff;
   display: flex;
   align-items: center;
@@ -81,7 +104,12 @@ export const NavSlider = styled.span`
   }
 `;
 
-export const NavLabel = styled.span`
+export const NavLabelLight = styled.span`
+  margin: 0 10px;
+  color: #000;
+`;
+
+export const NavLabelNight = styled.span`
   margin: 0 10px;
   color: #fff;
 `;

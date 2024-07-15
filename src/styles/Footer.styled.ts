@@ -1,6 +1,16 @@
 import styled from "styled-components";
 
-export const FooterContainer = styled.footer
+export const FooterContainerLight = styled.footer
+`background-color: #ddd;
+ color: #000;
+ padding: 1rem;
+ text-align: center;
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+`
+
+export const FooterContainerNight = styled.footer
 `background-color: #333;
  color: #fff;
  padding: 1rem;
@@ -37,8 +47,14 @@ justify-Content: center;
 flex-Grow:1;
 `
 
-export const LinkText = styled.a
+export const LinkTextLight = styled.a
 `
-color: #FFF;
+color: #000;
+text-decoration: none;
+`
+
+export const LinkTextNight = styled.a
+`
+color: #fff;
 text-decoration: none;
 `

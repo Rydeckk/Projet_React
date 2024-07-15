@@ -1,11 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Nav, NavLink, NavMenu, NavSwitch, NavCheckbox, NavSlider, NavLabel, NavToggleTheme } from '../styles/Navbar.styled';
+import { NavLight, NavNight, NavLinkLight, NavLinkNight, NavMenu, NavSwitch, NavCheckbox, NavSlider, NavLabelLight, NavLabelNight, NavToggleTheme } from '../styles/Navbar.styled';
 import ThemeContext from '../context/ThemeContext';
 
 const Navbar = () => {
     const themeContext = useContext(ThemeContext)
     const [checked, setChecked] = useState<boolean>(false)
+
+    const Nav = themeContext?.theme === 'night' ? NavNight : NavLight;
+    const NavLink = themeContext?.theme === 'night' ? NavLinkNight : NavLinkLight;
+    const NavLabel = themeContext?.theme === 'night' ? NavLabelNight : NavLabelLight;
 
     useEffect(() => {
         if (themeContext?.theme === 'night') {
