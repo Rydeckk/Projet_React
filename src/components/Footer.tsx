@@ -8,7 +8,7 @@ const Footer = () => {
             <DivSpan></DivSpan>
             <DivTextContext>
                 <DivText>
-                    <LinkText href="/session/:id">Session</LinkText>
+                    <LinkText href="/sessions/">Session</LinkText>
                 </DivText>
                 <DivText>
                     <LinkText href="/legal/">Mentions légales</LinkText>

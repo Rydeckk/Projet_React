@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { getSessions, addSession, updateSession, deleteSession } from '../api/ApiService';
 import {
-  Container,
-  Title,
+  ContainerLight, ContainerNight,
+  TitleLight, TitleNight,
   FormGroup,
-  Label,
-  Input,
-  Button,
+  LabelLight, LabelNight,
+  InputLight, InputNight,
+  ButtonLight, ButtonNight,
   EmployeeListContainer,
   EmployeeItem,
-  EditButton,
-  DeleteButton,
+  EditButtonLight, EditButtonNight,
+  DeleteButtonLight, DeleteButtonNight
 } from '../styles/EmployeeList.styled';
+import ThemeContext from '../context/ThemeContext';
 
 type Session = {
   id: number;
@@ -33,6 +34,15 @@ const SessionList = () => {
     availableSlots: [],
   });
   const [editSession, setEditSession] = useState<Session | null>(null);
+  const themeContext = useContext(ThemeContext);
+
+  const Container = themeContext?.theme === 'night' ? ContainerNight : ContainerLight;
+  const Title = themeContext?.theme === 'night' ? TitleNight : TitleLight;
+  const Label = themeContext?.theme === 'night' ? LabelNight : LabelLight;
+  const Input = themeContext?.theme === 'night' ? InputNight : InputLight;
+  const Button = themeContext?.theme === 'night' ? ButtonNight : ButtonLight;
+  const EditButton = themeContext?.theme === 'night' ? EditButtonNight : EditButtonLight;
+  const DeleteButton = themeContext?.theme === 'night' ? DeleteButtonNight : DeleteButtonLight;
 
   useEffect(() => {
     fetchSessions();

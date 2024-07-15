@@ -1,17 +1,29 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+export const ContainerLight = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 `;
 
-export const Title = styled.h2`
+export const ContainerNight = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  color: #fff;
+`;
+
+export const TitleLight = styled.h2`
   text-align: center;
   color: #333;
+  margin-bottom: 20px;
+`;
+
+export const TitleNight = styled.h2`
+  text-align: center;
+  color: #fff;
   margin-bottom: 20px;
 `;
 
@@ -19,30 +31,58 @@ export const FormGroup = styled.div`
   margin-bottom: 15px;
 `;
 
-export const Label = styled.label`
+export const LabelLight = styled.label`
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
   color: #555;
 `;
 
-export const Input = styled.input`
-  width: 100%;
+export const LabelNight = styled.label`
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+`;
+
+export const InputLight = styled.input`
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
+  font-size: 16px;
 `;
 
-export const Button = styled.button`
-  padding: 10px 15px;
+export const InputNight = styled.input`
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #1e2021;
+`;
+
+export const ButtonLight = styled.button`
+  padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #007BFF;
-  color: #fff;
+  background-color: #007bff;
+  color: white;
   font-size: 16px;
   cursor: pointer;
-  margin-right: 10px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+export const ButtonNight = styled.button`
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #01254d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 
   &:hover {
     background-color: #0056b3;
@@ -66,7 +106,7 @@ export const EmployeeItem = styled.li`
   }
 `;
 
-export const EditButton = styled(Button)`
+export const EditButtonLight = styled(ButtonLight)`
   background-color: #ffc107;
 
   &:hover {
@@ -74,10 +114,26 @@ export const EditButton = styled(Button)`
   }
 `;
 
-export const DeleteButton = styled(Button)`
+export const EditButtonNight = styled(ButtonNight)`
+  background-color: #936f03;
+
+  &:hover {
+    background-color: #ffc107;
+  }
+`;
+
+export const DeleteButtonLight = styled(ButtonLight)`
   background-color: #dc3545;
 
   &:hover {
     background-color: #c82333;
+  }
+`;
+
+export const DeleteButtonNight = styled(ButtonNight)`
+  background-color: #910511;
+
+  &:hover {
+    background-color: #dc3545;
   }
 `;
